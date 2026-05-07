@@ -2,7 +2,7 @@
   {
     "prefix": "XAW1",
     "status": "Potentially unpatched",
-    "guidance": "Usually check exact range with payload tests before assuming RCM exploit works"
+    "guidance": "Check exact range with payload tests before assuming the RCM exploit works"
   },
   {
     "prefix": "XAW4",

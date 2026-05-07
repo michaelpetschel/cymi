@@ -6,7 +6,20 @@ function initSwitchPage() {
   const checkButton = document.getElementById('check-serial');
   const serialResult = document.getElementById('serial-result');
 
-  if (![versionSelect, v1Panel, v2Panel, serialInput, checkButton, serialResult].every(Boolean)) {
+  const requiredElements = {
+    versionSelect,
+    v1Panel,
+    v2Panel,
+    serialInput,
+    checkButton,
+    serialResult
+  };
+  const missing = Object.entries(requiredElements)
+    .filter(([, value]) => !value)
+    .map(([name]) => name);
+
+  if (missing.length > 0) {
+    console.warn('Switch page initialization skipped. Missing elements:', missing.join(', '));
     return;
   }
 
@@ -24,7 +37,7 @@ function initSwitchPage() {
     const match = ranges.find((entry) => serial.startsWith(entry.prefix));
 
     if (!match) {
-      return 'Serial not found in database. Please verify with an updated Switch serial checker.';
+      return 'Serial prefix not recognized. Verify your serial and check current community serial resources.';
     }
 
     return `${match.prefix}: ${match.status}. ${match.guidance}`;
@@ -50,7 +63,7 @@ function initSwitchPage() {
       serialResult.textContent = getStatusMessage(serial, ranges);
     } catch (error) {
       console.error(error);
-      serialResult.textContent = 'Serial lookup failed. Check that the serial database file is accessible and valid JSON.';
+      serialResult.textContent = 'Unable to check serial number right now. Please try again later.';
     }
   }
 

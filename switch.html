@@ -23,7 +23,8 @@
         <p>Type your serial number to compare against known serial ranges.</p>
         <div class="inline-field">
           <label for="switch-serial">Switch serial number</label>
-          <input id="switch-serial" type="text" placeholder="Example: XAW10012345678" />
+          <p id="switch-serial-help">Format example: XAW10012345678.</p>
+          <input id="switch-serial" aria-describedby="switch-serial-help" type="text" placeholder="Example: XAW10012345678" />
           <button id="check-serial" type="button">Check serial</button>
         </div>
         <div id="serial-result" class="result" aria-live="polite">Enter a serial and click check.</div>
