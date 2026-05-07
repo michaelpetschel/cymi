@@ -1,4 +1,5 @@
 :root {
+  --table-min-width: 750px;
   color-scheme: dark;
   font-family: Arial, sans-serif;
 }
@@ -81,7 +82,7 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 750px;
+  min-width: var(--table-min-width);
 }
 
 th,
