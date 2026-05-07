@@ -1,0 +1,27 @@
+[
+  {
+    "prefix": "XAW1",
+    "status": "Potentially unpatched",
+    "guidance": "Check exact range with payload tests before assuming the RCM exploit works"
+  },
+  {
+    "prefix": "XAW4",
+    "status": "Patched",
+    "guidance": "Plan for a modchip route"
+  },
+  {
+    "prefix": "XKW1",
+    "status": "Patched (V2)",
+    "guidance": "Software-only method is not expected"
+  },
+  {
+    "prefix": "XKJ1",
+    "status": "Patched (Lite)",
+    "guidance": "Requires modchip installation"
+  },
+  {
+    "prefix": "XWW1",
+    "status": "Patched (OLED)",
+    "guidance": "Requires modchip installation"
+  }
+]

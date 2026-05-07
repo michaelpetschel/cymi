@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYMI - Choose Your Console</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <img src="/assets/banner.jpg" alt="Person playing video games" />
+        <div class="hero-copy">
+          <h1>Can You Mod It?</h1>
+          <p>Choose your Nintendo console.</p>
+        </div>
+      </header>
+
+      <section class="selector" aria-labelledby="choose-console">
+        <h2 id="choose-console">Choose your console</h2>
+        <div class="logo-grid" role="navigation" aria-label="Console pages">
+          <a class="console-button" href="ds.html" aria-label="DS family page">
+            <img src="assets/logo/Nintendo_DS_Logo.svg" alt="Nintendo DS" />
+          </a>
+          <a class="console-button" href="wii.html" aria-label="Wii family page">
+            <img src="assets/logo/Wii.svg" alt="Nintendo Wii" />
+          </a>
+          <a class="console-button" href="wiiu.html" aria-label="Wii U page">
+            <img src="assets/logo/WiiU.svg" alt="Nintendo Wii U" />
+          </a>
+          <a class="console-button" href="switch.html" aria-label="Switch page">
+            <img src="assets/logo/Nintendo_Switch_logo.svg" alt="Nintendo Switch" />
+          </a>
+          <button class="console-button disabled" type="button" aria-label="Switch 2 (Coming soon)" disabled>
+            <img src="assets/logo/Nintendo_Switch_2_logo.svg" alt="Nintendo Switch 2" />
+            <span>Coming soon</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="notice" aria-label="Modding notice">
+        <p>
+          <strong>Notice:</strong> Every DS, 2DS, 3DS, Wii, Wii Family Edition, Wii Mini, and Wii U is moddable, but
+          each has different features, models, firmware targets, and exploits.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
