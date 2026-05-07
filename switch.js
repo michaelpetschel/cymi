@@ -5,8 +5,6 @@ const serialInput = document.getElementById('switch-serial');
 const checkButton = document.getElementById('check-serial');
 const serialResult = document.getElementById('serial-result');
 
-const requiredElements = [versionSelect, v1Panel, v2Panel, serialInput, checkButton, serialResult];
-
 function updatePanels() {
   const isV2 = versionSelect.value === 'v2';
   v1Panel.hidden = isV2;
@@ -50,7 +48,8 @@ async function checkSerial() {
   }
 }
 
-if (requiredElements.every(Boolean)) {
+// Only initialize when all required DOM elements exist on switch.html.
+if ([versionSelect, v1Panel, v2Panel, serialInput, checkButton, serialResult].every(Boolean)) {
   versionSelect.addEventListener('change', updatePanels);
   checkButton.addEventListener('click', checkSerial);
   updatePanels();
