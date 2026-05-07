@@ -9,16 +9,24 @@
   <body>
     <main class="container">
       <a class="page-link back-home" href="index.html">← Back to home</a>
-      <section class="page-card">
+      <section class="page-card switch-card">
         <h1>Nintendo Switch</h1>
+        <img class="console-photo" src="assets/console/switch-v1.svg" alt="Nintendo Switch family illustration" />
+        <p>CYMI uses a checker-style flow inspired by SSNC, adapted for this site and expanded for all Nintendo families.</p>
+        <div class="switch-badges">
+          <span class="switch-badge">Serial first</span>
+          <span class="switch-badge">Firmware aware</span>
+          <span class="switch-badge">Model specific</span>
+        </div>
         <label for="switch-version">Select your model type</label>
         <select id="switch-version" class="switch-version-select">
           <option value="v1">V1 (Erista)</option>
           <option value="v2">V2 / Mariko / Lite / OLED</option>
         </select>
+        <a class="wizard-link" href="switch-wizard.html">Open Switch Wizard</a>
       </section>
 
-      <section id="switch-v1-panel" class="lookup-box">
+      <section id="switch-v1-panel" class="lookup-box switch-card">
         <h2>V1 serial check</h2>
         <p>Type your serial number to compare against known serial ranges.</p>
         <div class="inline-field">
@@ -28,10 +36,19 @@
           <button id="check-serial" type="button">Check serial</button>
         </div>
         <div id="serial-result" class="result" aria-live="polite">Enter a serial and click check.</div>
+        <div class="guide-links">
+          <h2>Guides and more info</h2>
+          <ul>
+            <li><a class="page-link" href="https://switch.hacks.guide/" target="_blank" rel="noopener noreferrer">Switch Hacks Guide (primary)</a></li>
+            <li><a class="page-link" href="https://switchbrew.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">SwitchBrew / Switch homebrew wiki</a></li>
+            <li><a class="page-link" href="https://damota.me/ssnc/" target="_blank" rel="noopener noreferrer">SSNC reference toolbox</a></li>
+          </ul>
+        </div>
       </section>
 
-      <section id="switch-v2-panel" class="lookup-box" hidden>
+      <section id="switch-v2-panel" class="lookup-box switch-card" hidden>
         <h2>V2 guidance</h2>
+        <img class="console-photo" src="assets/console/switch-v2.svg" alt="Nintendo Switch V2 family illustration" />
         <p>V2 and newer Switch models require hardware modification.</p>
         <a class="page-link" href="switch-v2.html">Go to V2 instructions</a>
       </section>

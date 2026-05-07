@@ -110,6 +110,75 @@ body {
   text-decoration: none;
 }
 
+.wizard-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: #1e3a8a;
+  color: #eff6ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.console-photo {
+  width: 100%;
+  max-width: 640px;
+  display: block;
+  margin: 0 0 1rem;
+  border-radius: 12px;
+  border: 1px solid #374151;
+  background: #0b1020;
+}
+
+.guide-links {
+  border-top: 1px solid #374151;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+}
+
+.guide-links ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.guide-links li {
+  margin: 0.35rem 0;
+}
+
+.switch-card {
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 0 1px #991b1b inset;
+  background: linear-gradient(180deg, #1b1f2a 0%, #121826 100%);
+}
+
+.switch-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.switch-badge {
+  border: 1px solid #dc2626;
+  color: #fee2e2;
+  background: #7f1d1d;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.wizard-steps {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.wizard-steps li {
+  margin: 0.45rem 0;
+}
+
 .inline-field {
   display: grid;
   gap: 0.5rem;
