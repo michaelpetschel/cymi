@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYMI - Nintendo Switch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <a class="page-link back-home" href="index.html">← Back to home</a>
+      <section class="page-card">
+        <h1>Nintendo Switch</h1>
+        <label for="switch-version">Select your model type</label>
+        <select id="switch-version" class="switch-version-select">
+          <option value="v1">V1 (Erista)</option>
+          <option value="v2">V2 / Mariko / Lite / OLED</option>
+        </select>
+      </section>
+
+      <section id="switch-v1-panel" class="lookup-box">
+        <h2>V1 serial check</h2>
+        <p>Type your serial number to compare against known serial ranges.</p>
+        <div class="inline-field">
+          <input id="switch-serial" type="text" placeholder="Example: XAW10012345678" />
+          <button id="check-serial" type="button">Check serial</button>
+        </div>
+        <div id="serial-result" class="result" aria-live="polite">Enter a serial and click check.</div>
+      </section>
+
+      <section id="switch-v2-panel" class="lookup-box" hidden>
+        <h2>V2 guidance</h2>
+        <p>V2 and newer Switch models require hardware modification.</p>
+        <a class="page-link" href="switch-v2.html">Go to V2 instructions</a>
+      </section>
+    </main>
+    <script src="switch.js"></script>
+  </body>
+</html>

@@ -3,133 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CYMI - Can You Mod It?</title>
+    <title>CYMI - Choose Your Console</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
       <header class="hero">
-        <img
-          src="/assets/banner.jpg"
-          alt="Person playing video games"
-        />
+        <img src="assets/banner.jpg" alt="Person playing video games" />
         <div class="hero-copy">
           <h1>Can You Mod It?</h1>
-          <p>Pick your Nintendo console family to find the best entry point.</p>
+          <p>Choose your Nintendo console.</p>
         </div>
       </header>
 
       <section class="selector" aria-labelledby="choose-console">
         <h2 id="choose-console">Choose your console</h2>
-        <div class="options">
-          <label><input type="radio" name="console-family" value="ds-family" checked /> DS / 2DS / 3DS family</label>
-          <label><input type="radio" name="console-family" value="wii-family" /> Wii family</label>
-          <label><input type="radio" name="console-family" value="wii-u" /> Wii U</label>
-          <label><input type="radio" name="console-family" value="switch" /> Switch</label>
-          <label class="disabled"
-            ><input type="radio" name="console-family" value="switch-2" aria-label="Switch 2 (Coming soon)" disabled /> Switch 2 <span aria-hidden="true">Coming soon</span></label
-          >
+        <div class="logo-grid" role="navigation" aria-label="Console pages">
+          <a class="console-button" href="ds.html" aria-label="DS family page">
+            <img src="assets/logo/Nintendo_DS_Logo.svg" alt="Nintendo DS" />
+          </a>
+          <a class="console-button" href="wii.html" aria-label="Wii family page">
+            <img src="assets/logo/Wii.svg" alt="Nintendo Wii" />
+          </a>
+          <a class="console-button" href="wiiu.html" aria-label="Wii U page">
+            <img src="assets/logo/WiiU.svg" alt="Nintendo Wii U" />
+          </a>
+          <a class="console-button" href="switch.html" aria-label="Switch page">
+            <img src="assets/logo/Nintendo_Switch_logo.svg" alt="Nintendo Switch" />
+          </a>
+          <button class="console-button disabled" type="button" aria-label="Switch 2 (Coming soon)" disabled>
+            <img src="assets/logo/Nintendo_Switch_2_logo.svg" alt="Nintendo Switch 2" />
+            <span aria-hidden="true">Coming soon</span>
+          </button>
         </div>
       </section>
 
       <section class="notice" aria-label="Modding notice">
-        <p><strong>Notice:</strong> Every DS, 2DS, 3DS, Wii family console (including Wii Family Edition, Wii Mini, and the Wii U) is moddable, but each model and firmware has different features and exploits.</p>
-      </section>
-
-      <section aria-labelledby="feature-matrix">
-        <h2 id="feature-matrix">Feature and exploit guide</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Console / Revision</th>
-                <th>Moddable</th>
-                <th>CFW/Homebrew support</th>
-                <th>Backup Loading</th>
-                <th>Best exploit (model + firmware + serial guidance)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>DS / DS Lite</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>❌</td>
-                <td>Flashcart method — works across all firmware; confirm your cart supports your DS model, region, and SD/SDHC card size.</td>
-              </tr>
-              <tr>
-                <td>DSi / DSi XL</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Memory Pit (or compatible DSiWare entry) — best on 1.4.5 and below with SD card access.</td>
-              </tr>
-              <tr>
-                <td>2DS / New 2DS XL</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Seedminer + Bannerbomb3/Frogminer — verify system version and region before starting.</td>
-              </tr>
-              <tr>
-                <td>3DS / 3DS XL / New 3DS</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Boot9strap via safe-mode route (MSET/Super-skaterhax path varies by firmware and model).</td>
-              </tr>
-              <tr>
-                <td>Wii (Original RVL-001)</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>LetterBomb (4.3) or str2hax/Wilbrand — use MAC + firmware to generate the right payload.</td>
-              </tr>
-              <tr>
-                <td>Wii Family Edition (RVL-101)</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>LetterBomb on 4.3; if unavailable, use str2hax. No GameCube ports on this revision.</td>
-              </tr>
-              <tr>
-                <td>Wii Mini (RVL-201)</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>❌</td>
-                <td>BlueBomb (Linux/Bluetooth exploit) — best option due to missing WiFi/network features.</td>
-              </tr>
-              <tr>
-                <td>Other Wii revisions (regional hardware variants)</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Use Wii method matching your firmware and region; serial range helps identify edge-case boards.</td>
-              </tr>
-              <tr>
-                <td>Wii U</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Tiramisu (preferred) or Aroma — check firmware (5.5.x) and region before payload setup.</td>
-              </tr>
-              <tr>
-                <td>Switch (Erista/Mariko/Lite/OLED)</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>✅</td>
-                <td>Unpatched Erista: Fusée Gelée by serial check. Patched/Mariko/Lite/OLED: modchip route.</td>
-              </tr>
-              <tr class="coming-soon-row">
-                <td>Switch 2</td>
-                <td>❌</td>
-                <td>❌</td>
-                <td>❌</td>
-                <td>Coming soon — exploit guidance will be added once publicly vetted methods are available.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p>
+          <strong>Notice:</strong> Every DS, 2DS, 3DS, Wii, Wii Family Edition, Wii Mini, and Wii U is moddable, but
+          each has different features, models, firmware targets, and exploits.
+        </p>
       </section>
     </main>
   </body>
