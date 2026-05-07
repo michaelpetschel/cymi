@@ -5,6 +5,8 @@ const serialInput = document.getElementById('switch-serial');
 const checkButton = document.getElementById('check-serial');
 const serialResult = document.getElementById('serial-result');
 
+const requiredElements = [versionSelect, v1Panel, v2Panel, serialInput, checkButton, serialResult];
+
 function updatePanels() {
   const isV2 = versionSelect.value === 'v2';
   v1Panel.hidden = isV2;
@@ -44,10 +46,12 @@ async function checkSerial() {
     const ranges = await response.json();
     serialResult.textContent = getStatusMessage(serial, ranges);
   } catch (error) {
-    serialResult.textContent = 'Serial lookup failed. Serve this site over HTTP to allow JSON lookup.';
+    serialResult.textContent = 'Serial lookup failed. Check that the serial database file is accessible.';
   }
 }
 
-versionSelect.addEventListener('change', updatePanels);
-checkButton.addEventListener('click', checkSerial);
-updatePanels();
+if (requiredElements.every(Boolean)) {
+  versionSelect.addEventListener('change', updatePanels);
+  checkButton.addEventListener('click', checkSerial);
+  updatePanels();
+}
