@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYMI - Can You Mod It?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <img
+          src="https://github.com/user-attachments/assets/f1b0373f-f93e-493d-9cca-0fbf4a4bd5ce"
+          alt="Person playing video games"
+        />
+        <div class="hero-copy">
+          <h1>Can You Mod It?</h1>
+          <p>Pick your Nintendo console family to find the best entry point.</p>
+        </div>
+      </header>
+
+      <section class="selector" aria-labelledby="choose-console">
+        <h2 id="choose-console">Choose your console</h2>
+        <div class="options">
+          <label><input type="radio" name="console-family" checked /> DS / 2DS / 3DS family</label>
+          <label><input type="radio" name="console-family" /> Wii family</label>
+          <label><input type="radio" name="console-family" /> Wii U</label>
+          <label><input type="radio" name="console-family" /> Switch</label>
+          <label class="disabled"
+            ><input type="radio" name="console-family" disabled /> Switch 2 <span>Coming soon</span></label
+          >
+        </div>
+      </section>
+
+      <section class="notice" aria-label="Modding notice">
+        <p>
+          <strong>Notice:</strong> Every DS, 2DS, 3DS, Wii, Wii U, and Wii Mini is moddable, but each model and firmware
+          has different features and exploits.
+        </p>
+      </section>
+
+      <section aria-labelledby="feature-matrix">
+        <h2 id="feature-matrix">Feature and exploit guide</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Console / Revision</th>
+                <th>Moddable</th>
+                <th>CFW Homebrew</th>
+                <th>Backup Loading</th>
+                <th>Best exploit (model + firmware + serial guidance)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DS / DS Lite</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>Flashcart method — works across all firmware; match cartridge support to your specific DS model.</td>
+              </tr>
+              <tr>
+                <td>DSi / DSi XL</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>Memory Pit (or compatible DSiWare entry) — best on 1.4.5 and below with SD card access.</td>
+              </tr>
+              <tr>
+                <td>2DS / New 2DS XL</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Seedminer + Bannerbomb3/Frogminer — verify system version and region before starting.</td>
+              </tr>
+              <tr>
+                <td>3DS / 3DS XL / New 3DS</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Boot9strap via safe-mode route (MSET/Super-skaterhax path varies by firmware and model).</td>
+              </tr>
+              <tr>
+                <td>Wii (Original RVL-001)</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>LetterBomb (4.3) or str2hax/Wilbrand — use MAC + firmware to generate the right payload.</td>
+              </tr>
+              <tr>
+                <td>Wii Family Edition (RVL-101)</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>LetterBomb on 4.3; if unavailable, use str2hax. No GameCube ports on this revision.</td>
+              </tr>
+              <tr>
+                <td>Wii Mini (RVL-201)</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>❌</td>
+                <td>BlueBomb (Linux/Bluetooth exploit) — best option due to missing SD/network features.</td>
+              </tr>
+              <tr>
+                <td>Other Wii revisions (regional hardware variants)</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Use Wii method matching your firmware and region; serial range helps identify edge-case boards.</td>
+              </tr>
+              <tr>
+                <td>Wii U</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Tiramisu (preferred) or Aroma — check firmware (5.5.x) and region before payload setup.</td>
+              </tr>
+              <tr>
+                <td>Switch (Erista/Mariko/Lite/OLED)</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Unpatched Erista: Fusée Gelée by serial check. Patched/Mariko/Lite/OLED: modchip route.</td>
+              </tr>
+              <tr class="coming-soon-row">
+                <td>Switch 2</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>Coming soon — exploit guidance will be added once publicly vetted methods are available.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
